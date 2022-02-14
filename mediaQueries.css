@@ -4,15 +4,48 @@
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 420px) {
+/* ---------- Tablet Devices 720px < width < 1024px ---------- */
+@media only screen 
+    and (max-width: 1024px) {
   body,
   #why {
     background-color: #f2f2cd;
   }
   .row {
-    width: 100vw;
+    width: 90vw;
   }
+  #lezioni .row > .left,
+  #lezioni .row > .right {
+    width: calc(100% / 2);
+    padding: 2vw;
+  }
+  #steps .row > .left,
+  #steps .row > .central,
+  #steps .row > .right {
+    width: calc(100% / 3);
+    padding: 2vw;
+  }
+}
+/* ---------- Tablet Devices 720px < width < 1024px ---------- */
 
+/* ---------- Devices 420px < width < 720px ---------- */
+@media only screen and (max-width: 720px) {
+    #lezioni .row > .left,
+    #lezioni .row > .right {
+        float: none;
+        width: 90vw;
+    }
+    #steps .row > .left,
+    #steps .row > .central,
+    #steps .row > .right {
+        float: none;
+        width: 90vw;
+    }
+  }
+/* ---------- / Devices 420px < width < 720px ---------- */
+
+/* ---------- Mobile Devices >420px ---------- */
+@media only screen and (max-width: 419px) {
   #lezioni .row > .left,
   #lezioni .row > .right,
   #steps .row > .left,
@@ -21,9 +54,13 @@
   #why .row > .first,
   #why .row > .second,
   #why .row > .third {
-    float: none;
-    width: 90vw;
     margin: auto;
     margin-top: 2vh;
   }
+  img{
+      max-width: 200px;
+      width: 60vw;
+      height: auto;
+  }
 }
+/* ---------- / Mobile Devices >420px ---------- */
