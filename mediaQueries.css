@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 420px) {
+  body,
+  #why {
+    background-color: #f2f2cd;
+  }
+  .row {
+    width: 100vw;
+  }
+
+  #lezioni .row > .left,
+  #lezioni .row > .right,
+  #steps .row > .left,
+  #steps .row > .central,
+  #steps .row > .right,
+  #why .row > .first,
+  #why .row > .second,
+  #why .row > .third {
+    float: none;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2vh;
+  }
+}
